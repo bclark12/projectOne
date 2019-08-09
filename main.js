@@ -148,6 +148,11 @@ let checkLose = function () {
         if (this.innerText == 'Z') {
             return console.log('stop messing with stuff and play a new game');
         };
+        let scoreboard = document.getElementById('scoreboardLose')
+        let scoreboardText = scoreboard.innerText;
+        let scoreboardValue = parseFloat(scoreboardText);
+        console.log(scoreboardValue);
+        scoreboard.innerHTML = scoreboardValue + 1;
         for (i = 0; i < alphabet.length; i++) {    
             let letters = document.getElementById('letter-' + i);
             letters.style.color = 'white';
@@ -155,7 +160,7 @@ let checkLose = function () {
             letters.innerText = 'Z';
         };
         document.getElementById('letterBank').style.background = 'white';
-                              
+                             
         // if (this.innerText == 'Z') {
         //     console.log('stop messing with stuff and play a new game');
         // }
