@@ -121,7 +121,7 @@ let checkWin = function () {
         scoreboard.innerHTML = scoreboardValue + 1;
         console.log(scoreboard.innerHTML);
         let winningImage = document.getElementById('mainImage');
-        winningImage.src = "https://atgbcentral.com/data/out/83/4656995-cool-background-pictures.jpg";
+        winningImage.src = "images/winningImage.png";
         for (i = 0; i < alphabet.length; i++) {    
             let letters = document.getElementById('letter-' + i);
             letters.style.color = 'white';
@@ -176,7 +176,7 @@ let resetGame = function () {
         let letters = document.getElementById('letter-' + i);
         letters.innerText = alphabet[i];
         letters.style.color = 'white';
-        letters.style.background = 'purple';        
+        letters.style.background = 'purple';    
     };
     for (i = 0; i < randomWordArray.length; i++) {
         let rightDiv = document.getElementById('right-' + i);
@@ -188,11 +188,12 @@ let resetGame = function () {
     };
     wrongLettersArray = []
     startingImage = document.getElementById('mainImage');
-    startingImage.src = "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/12/15/campaign_images/webdr01/23-pictures-only-pokemon-fans-will-think-are-funny-2-17684-1444678742-3_dblbig.jpg"
+    startingImage.src = "images/startingImage.png";
     document.getElementById('letterBank').style.background = 'purple';
 };
 let getNewRandomWord = function () {
     //randomWordArray length is still the length of the current word until we change it on the next line
+
     for (i = 0; i < randomWordArray.length; i++) {
         let rightDiv = document.getElementById('right-' + i);
         rightDiv.remove();
@@ -213,11 +214,18 @@ let getNewRandomWord = function () {
     wrongLettersArray = [];
     console.log(randomWordArray);
     startingImage = document.getElementById('mainImage');
-    startingImage.src = "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/12/15/campaign_images/webdr01/23-pictures-only-pokemon-fans-will-think-are-funny-2-17684-1444678742-3_dblbig.jpg";
+    startingImage.src = "images/startingImage.png";
     //console.log(lettersArray[getRandomWordIndex()]);
     //randomWordArray = lettersArray[getRandomWordIndex()];
     //console.log('button works')
-};    
+}; 
+let changeLetterBackground = function () {
+    this.style.backgroundColor = 'red';
+    this.style.cursor = 'default';
+};
+let revertLetterBackground = function () {
+    this.style.backgroundColor = 'purple';
+};   
     
     // for (i = 0; i < alphabet.length; i++) {
     //     let letters = document.getElementById('letter-' + i);
@@ -253,6 +261,11 @@ for (i = 0; i < alphabet.length; i++) {
 for (i = 0; i < alphabet.length; i++) {
     document.getElementById('letter-' + i).addEventListener('click', checkWin);
 };
-
+for (i = 0; i < alphabet.length; i++) {
+    document.getElementById('letter-' + i).addEventListener('mouseover', changeLetterBackground);
+};
+for (i = 0; i < alphabet.length; i++) {
+    document.getElementById('letter-' + i).addEventListener('mouseleave', revertLetterBackground);
+};
 document.getElementById('resetButton').addEventListener('click', resetGame);
 document.getElementById('newWordButton').addEventListener('click', getNewRandomWord);

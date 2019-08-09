@@ -1,8 +1,12 @@
-
+body {
+    text-align: center;
+}
 content {
-    display: flex;
-    flex-direction: column;
+    display:inline-block;
     align-items: center;
+    width: 800px;
+    height: 900px;
+    border: 2px solid black;
 }
 header {
     display: flex;
@@ -10,10 +14,15 @@ header {
 
 }
 h1 {
-    background: red;
     padding: 15px 0 0 0;
     height: 75px;
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 30px;
 
+}
+.button:focus {
+    outline: none;
 }
 #wrapper {
     display: flex;
@@ -21,11 +30,12 @@ h1 {
     align-items: flex-end;
 }
 #letterBank {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     background: purple;
     justify-content: space-evenly;
-    height: 390px;
+    height: 400px;
     width: 60px;
     font-weight: bolder;
     font-size: large;
@@ -38,10 +48,8 @@ h1 {
     margin: 0px 3px 3px 3px;
     padding: 0px 0 12px 5px;    
 }
-.letters:hover {
-    background-color: red;
-    cursor: default;
-}
+
+
 #opener {
     display: flex;
     flex-direction: column;
@@ -101,19 +109,23 @@ p {
     border-bottom: 2px black solid;
 }
 ol {
+    margin: 0 30px 0 0;
     display: flex;
-    justify-content: space-evenly;
-}
+    justify-content: center;
+
+};
+
 #inputBox {
-    margin: 50px 0 0 0;
+    margin: 0px 20px 0 0;
     text-align: center;
+
     
 }
 .right{
     height: 20px;
     width: 50px;
     border-bottom: 2px black solid;
-    margin: 40px 25px 0 15px;
+    margin: 40px 25px 0 0px;
 }
 
 .button {
@@ -121,10 +133,12 @@ ol {
     height: 20px;
     background-color: blue;
     color: white;
+    margin-top: 60px;
 
 }
 footer {
-    margin: 100px 0 0 0;
+    margin: 60px 0 0 50px;
     color: red;
+
 
 }
