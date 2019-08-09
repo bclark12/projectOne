@@ -159,6 +159,7 @@ let checkLose = function () {
             letters.style.background = 'white';
             letters.innerText = 'Z';
         };
+        alert('you lose!')
         document.getElementById('letterBank').style.background = 'white';
                              
         // if (this.innerText == 'Z') {
