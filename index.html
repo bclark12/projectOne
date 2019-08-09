@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-    img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    
-    }    
-    </style>
+    <title>Hangman Game</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,9 +10,7 @@
     <script defer src="main.js"></script>
 </head>
 <header>
-    <h1>
-        <p>Hangman Game</p>
-    </h1>
+    <h1>Hangman Game</h1>
 
 </header>
 <body>
@@ -33,11 +23,15 @@
             <p id="explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores non ea incidunt modi eaque delectus qui tenetur corporis veniam reprehenderit eos, minima iusto, totam, molestiae blanditiis. In asperiores soluta amet!
 
             </p>
-            <p id="scoreHeader">Win Count
+            <h2 id="scoreHeader">Win Count &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Loss Count</h2>
 
-            </p>
-            <div id="scoreboard">
+            <div id="scoreboardContainer">
+            <div id="scoreboardWin" class="scoreNumbers">
                 0
+            </div>
+            <div id="scoreboardLose" class="scoreNumbers">
+                0
+            </div>
             </div>
             <div id="imgContainer">
                 <img id="mainImage" src="https://img.buzzfeed.com/buzzfeed-static/static/2015-10/12/15/campaign_images/webdr01/23-pictures-only-pokemon-fans-will-think-are-funny-2-17684-1444678742-3_dblbig.jpg">
@@ -57,8 +51,8 @@
 
     </ol>
     <div id="inputBox">
-        <button id="resetButton" class="button"></button>
-        <button id="newWordButton" class="button"></button>
+        <button id="resetButton" class="button">Reset</button>
+        <button id="newWordButton" class="button">New Word</button>
     </div>
     <footer>
         <p>this is the footer at the bottom of the body</p>

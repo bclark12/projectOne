@@ -1,3 +1,4 @@
+
 content {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@ header {
 h1 {
     background: red;
     padding: 15px 0 0 0;
+    height: 75px;
 
 }
 #wrapper {
@@ -48,7 +50,7 @@ h1 {
 #imgContainer {
     width: 700px;
     height: 380px;
-    background: white;
+
     margin-top: 0px;
 
 }
@@ -65,22 +67,30 @@ img {
 p {
     width: 400px;
     text-align: center;
-    margin: 15px 150px 0px 150px;
+    margin: 15px 150px 0 150px;
 }
 #explanation {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 #scoreHeader {
     font-size: 2em;
     font-weight: bolder;
-}
-#scoreboard {
-    width: 700px;
-    height: 20px;
     text-align: center;
-    margin-bottom: 150px;
+    margin: 0;
+    padding: 0;
+}
+#scoreboardContainer {
+    width: 700px;
+    height: 140px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.scoreNumbers {
+    text-align: center;
     font-size: 7em;
-
 }
 
 .wrong {
@@ -103,7 +113,7 @@ ol {
     height: 20px;
     width: 50px;
     border-bottom: 2px black solid;
-    margin: 100px 25px 0 15px;
+    margin: 40px 25px 0 15px;
 }
 
 .button {

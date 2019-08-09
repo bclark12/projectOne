@@ -115,7 +115,7 @@ let checkWin = function () {
         return console.log('stop messing with stuff and play a new game')
     }
     if (this.innerText !== 'Z') {
-        let scoreboard = document.getElementById('scoreboard')
+        let scoreboard = document.getElementById('scoreboardWin')
         let scoreboardText = scoreboard.innerText;
         let scoreboardValue = parseFloat(scoreboardText);
         console.log(scoreboardValue);
@@ -146,7 +146,7 @@ console.log(document.getElementById('letter-' + 1).innerText)
 let checkLose = function () {
     if (wrongLettersArray.length === 6) {
         if (this.innerText == 'Z') {
-            console.log('stop messing with stuff and play a new game');
+            return console.log('stop messing with stuff and play a new game');
         };
         for (i = 0; i < alphabet.length; i++) {    
             let letters = document.getElementById('letter-' + i);
