@@ -85,7 +85,7 @@ let addButtonFunction = function () {
     wrongLettersArray.push(this.innerText);
     wrongIdNumber = (wrongLettersArray.length - 1);
     losingImage = document.getElementById('mainImage')
-    losingImage.src = ("images/image-" + wrongIdNumber + ".jpeg");
+    losingImage.src = ("images/image-" + wrongIdNumber + ".png");
     currentWrongDiv = document.getElementById('wrong-' + (wrongIdNumber));
     currentWrongDiv.innerText = this.innerText;       
     this.style.color = 'purple';
@@ -107,7 +107,6 @@ let checkWin = function () {
         let rightBoxes = document.getElementById('right-' + i);
         //console.log("checks for undefined: " + rightBoxes)
         if (rightBoxes.innerText == false) {
-            console.log('button is linked');
             return    
         };    
     };
