@@ -5,7 +5,6 @@ content {
     display:inline-block;
     align-items: center;
     width: 800px;
-    height: 900px;
     border: 2px solid black;
 }
 header {
@@ -141,4 +140,4 @@ footer {
     color: red;
 
 
-}
+} 

@@ -5,6 +5,7 @@ for (i = 97; i <= 122; i++) {
     alphabet.push(arrayLetter);
 }
 let wrongLettersArray = [];
+let rightLettersArray = [];
 
 //this is where the different words for the game can be entered
 const wordsArray = ['movie', 'heyguys', 'another', 'lastone', 'jkone', 'hat', 'cool', 'nerd'];
@@ -63,6 +64,8 @@ let addButtonFunction = function () {
     for (i = 0; i < randomWordArray.length; i++) {
         if (this.innerText == randomWordArray[i]) {
             let correctDiv = document.getElementById('right-' + i);
+            rightLettersArray.push(this.innerText);
+            console.log(rightLettersArray.length);   
             correctDiv.innerText = randomWordArray[i];           
         }       
     };
@@ -100,7 +103,18 @@ let addButtonFunction = function () {
     alert('you done picked this letter already');
     return console.log('you done picked this letter already');       
 };
-
+// let changeLetterBackground = function () {
+//     this.style.cursor = 'default';
+//     this.style.backgroundColor = 'red';
+//     //for (i = 0; i < randomWordArray.length; i++) {
+//         if (wrongLettersArray.length == 6) {
+//         return this.style.background = 'white';
+//         };
+//         if (rightLettersArray.length == randomWordArray.length) {
+//         return this.style.backgroundColor = 'white';       
+//         }
+//     this.style.backgroundColor = 'red';
+//     };
 
 let checkWin = function () {
     for (i = 0; i < randomWordArray.length; i++) {
@@ -187,6 +201,7 @@ let resetGame = function () {
         wrongDiv.innerText = null;
     };
     wrongLettersArray = []
+    rightLettersArray = []
     startingImage = document.getElementById('mainImage');
     startingImage.src = "images/startingImage.png";
     document.getElementById('letterBank').style.background = 'purple';
@@ -212,6 +227,7 @@ let getNewRandomWord = function () {
     randomWordArray = lettersArray[getRandomWordIndex()]
     createRightBoxes();
     wrongLettersArray = [];
+    rightLettersArray = [];
     console.log(randomWordArray);
     startingImage = document.getElementById('mainImage');
     startingImage.src = "images/startingImage.png";
@@ -219,13 +235,50 @@ let getNewRandomWord = function () {
     //randomWordArray = lettersArray[getRandomWordIndex()];
     //console.log('button works')
 }; 
+// let changeLetterBackground = function () {
+//     this.style.cursor = 'default';
+//     //for (i = 0; i < randomWordArray.length; i++) {
+//         if (wrongLettersArray.length == 6) {
+//         return this.style.background = 'white';
+//         };
+//         if (rightLettersArray.length == randomWordArray.length) {
+//             console.log(rightLettersArray.length)
+//         return this.style.backgroundColor = 'white';
+        
+//         }
+//     //};
+
+
+    
+//     this.style.backgroundColor = 'red';
+    
+// };
 let changeLetterBackground = function () {
-    this.style.backgroundColor = 'red';
     this.style.cursor = 'default';
-};
+    this.style.backgroundColor = 'red';
+    //for (i = 0; i < randomWordArray.length; i++) {
+        if (wrongLettersArray.length == 6) {
+        return this.style.background = 'white';
+        };
+        if (rightLettersArray.length == randomWordArray.length) {
+        return this.style.backgroundColor = 'white';       
+        };
+    };
 let revertLetterBackground = function () {
-    this.style.backgroundColor = 'purple';
-};   
+    for (i = 0; i < randomWordArray.length; i++) {
+        if (wrongLettersArray.length == 6) {
+        return this.style.background = 'white';
+        }
+        let rightBoxes = document.getElementById('right-' + i);
+        if (rightBoxes.innerText == false) {
+        this.style.backgroundColor = 'purple'
+        };    
+    //this.style.backgroundColor = 'purple';
+    };
+};
+
+    
+  
     
     // for (i = 0; i < alphabet.length; i++) {
     //     let letters = document.getElementById('letter-' + i);
