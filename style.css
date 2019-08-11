@@ -1,6 +1,7 @@
 body {
     text-align: center;
-    background: black;
+    background-image: url("images/mainBackground.png");
+    background-size: cover;
     color: white;
 }
 content {
@@ -8,10 +9,11 @@ content {
     align-items: center;
     width: 800px;
     border: 4px white solid;
-    height: 820px;
+    height: 825px;
     padding: 0 20px 0 20px;
     border-radius: 7px;
     font-family: 'Staatliches', cursive;
+    background: black;
 }
 header {
     display: flex;
@@ -41,7 +43,7 @@ h1 {
     flex-wrap: wrap;
     background: black;
     justify-content: space-evenly;
-    height: 470px;
+    height: 510px;
     width: 80px;
     font-weight: bolder;
     font-size: 24px;
@@ -149,15 +151,16 @@ ol {
 
 .button {
     width: 100px;
-    height: 26px;
-    background-color: orangered;
-    color: white;
+    height: 29px;
+    background-color: magenta;
+    color: cyan;
+    border: 2px cyan solid;
     margin-top: 40px;
     margin-right: 14px;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 13px;
     font-family: 'Staatliches', cursive;
-    padding-top: 4px;
+    padding-top: 2px;
 
 }
 .button:hover {
@@ -168,6 +171,7 @@ footer {
     margin: 60px 0 0 0;
     color: red;
     font-family: 'Times New Roman', Times, serif;
+    color: white;
 
 
 }
