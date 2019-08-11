@@ -54,6 +54,7 @@ let createRightBoxes = function () {
     }
 };
 createRightBoxes();
+//white
 
 
 //This is where we control the flow. When i get home create div elements in the dom
@@ -73,7 +74,7 @@ let addButtonFunction = function () {
         if (this.innerText == randomWordArray[i]) {
             this.innerText = '!';
             //this.style.textDecoration = 'line-through';
-            this.style.color = 'purple';            
+            this.style.color = 'black';            
             return console.log('Match!');
         };
     };                       
@@ -91,7 +92,7 @@ let addButtonFunction = function () {
     losingImage.src = ("images/image-" + wrongIdNumber + ".png");
     currentWrongDiv = document.getElementById('wrong-' + (wrongIdNumber));
     currentWrongDiv.innerText = this.innerText;       
-    this.style.color = 'purple';
+    this.style.color = 'black';
     console.log('wrong');
 
     return this.innerText = 'X';
@@ -127,6 +128,7 @@ let checkWin = function () {
     if (this.innerText == 'Z') {
         return console.log('stop messing with stuff and play a new game')
     }
+    //border
     //if (this.innerText !== 'Z') {
         let scoreboard = document.getElementById('scoreboardWin')
         let scoreboardText = scoreboard.innerText;
@@ -138,15 +140,15 @@ let checkWin = function () {
         winningImage.src = "images/winningImage.jpg"
         for (i = 0; i < alphabet.length; i++) {    
             let letters = document.getElementById('letter-' + i);
-            letters.style.color = 'white';
-            letters.style.background = 'white';
+            letters.style.color = 'black';
+            letters.style.background = 'black';
             letters.innerText = 'Z';
         };
         //////If you can reload css.... put it here
-        document.getElementById('letterBank').style.background = 'white';
+        document.getElementById('letterBank').style.background = 'black';
         //document.getElementById('opener').style.marginLeft = '120px';
         //document.getElementById('mainImage').style.marginRight = '195px';
-        alert('Good job! You Win!');
+
         console.log('good job');
         //console.log(this.innerText);
     };
@@ -154,7 +156,8 @@ let checkWin = function () {
     // console.log('stop messing with stuff and play a new game');
     // };
 //};
-
+//white
+//alert
 console.log(document.getElementById('letter-' + 1).innerText)
 let checkLose = function () {
     if (wrongLettersArray.length === 6) {
@@ -168,14 +171,13 @@ let checkLose = function () {
         scoreboard.innerHTML = scoreboardValue + 1;
         for (i = 0; i < alphabet.length; i++) {    
             let letters = document.getElementById('letter-' + i);
-            letters.style.color = 'white';
-            letters.style.background = 'white';
+            letters.style.color = 'black';
+            letters.style.background = 'black';
             letters.innerText = 'Z';
         };
-        alert('you lose!')
         document.getElementById('imgContainer').style.backgroundImage = "url('images/gameOver.png')";
         document.getElementById('imgContainer').addEventListener('click', resetGame);
-        document.getElementById('letterBank').style.background = 'white';
+        document.getElementById('letterBank').style.background = 'black';
                              
         // if (this.innerText == 'Z') {
         //     console.log('stop messing with stuff and play a new game');
@@ -192,7 +194,7 @@ let resetGame = function () {
         let letters = document.getElementById('letter-' + i);
         letters.innerText = alphabet[i];
         letters.style.color = 'white';
-        letters.style.background = 'purple';    
+        letters.style.background = 'black';    
     };
     for (i = 0; i < randomWordArray.length; i++) {
         let rightDiv = document.getElementById('right-' + i);
@@ -208,7 +210,7 @@ let resetGame = function () {
     rightLettersArray = []
     startingImage = document.getElementById('mainImage');
     startingImage.src = "images/startingImage.png";
-    document.getElementById('letterBank').style.background = 'purple';
+    document.getElementById('letterBank').style.background = 'black';
 };
 let getNewRandomWord = function () {
     //randomWordArray length is still the length of the current word until we change it on the next line
@@ -221,14 +223,14 @@ let getNewRandomWord = function () {
         let letters = document.getElementById('letter-' + i);
         letters.innerText = alphabet[i];
         letters.style.color = 'white';
-        letters.style.background = 'purple';        
+        letters.style.background = 'black';        
     };
     for (i = 0; i < 6; i++) {
         let wrongDiv = document.getElementById('wrong-' + i);
         wrongDiv.innerText = null;
     };
     document.getElementById('imgContainer').style.background = 'none';
-    document.getElementById('letterBank').style.background = 'purple';
+    document.getElementById('letterBank').style.background = 'black';
     randomWordArray = lettersArray[getRandomWordIndex()]
     createRightBoxes();
     wrongLettersArray = [];
@@ -263,22 +265,22 @@ let changeLetterBackground = function () {
     this.style.backgroundColor = 'red';
     //for (i = 0; i < randomWordArray.length; i++) {
         if (wrongLettersArray.length == 6) {
-        return this.style.background = 'white';
+        return this.style.background = 'black';
         };
         if (rightLettersArray.length == randomWordArray.length) {
-        return this.style.backgroundColor = 'white';       
+        return this.style.backgroundColor = 'black';       
         };
     };
 let revertLetterBackground = function () {
     for (i = 0; i < randomWordArray.length; i++) {
         if (wrongLettersArray.length == 6) {
-        return this.style.background = 'white';
+        return this.style.background = 'black';
         }
         let rightBoxes = document.getElementById('right-' + i);
         if (rightBoxes.innerText == false) {
-        this.style.backgroundColor = 'purple'
+        this.style.backgroundColor = 'black'
         };    
-    //this.style.backgroundColor = 'purple';
+    //this.style.backgroundColor = 'white';
     };
 };
 

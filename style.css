@@ -1,11 +1,17 @@
 body {
     text-align: center;
+    background: black;
+    color: white;
 }
 content {
     display:inline-block;
     align-items: center;
     width: 800px;
-    border: 2px solid black;
+    border: 4px white solid;
+    height: 820px;
+    padding: 0 20px 0 20px;
+    border-radius: 7px;
+    font-family: 'Staatliches', cursive;
 }
 header {
     display: flex;
@@ -16,8 +22,9 @@ h1 {
     padding: 15px 0 0 0;
     height: 75px;
     font-size: 5em;
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin: 0 0 30px 30px;
+    font-family: 'Monoton', cursive; 
+    
 
 }
 .button:focus {
@@ -32,21 +39,23 @@ h1 {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    background: purple;
+    background: black;
     justify-content: space-evenly;
     height: 470px;
     width: 80px;
     font-weight: bolder;
     font-size: large;
     color: white;
+    font-family: 'Staatliches', cursive;
 }
 .letters {
     height: 10px;
-    width: 17px;
-    border-bottom: 2px white solid;
+    width: 13px;
+    border: 2px white solid;
     margin: 0px 3px 3px 3px;
-    padding: 0px 3px 17px 3px;
-    font-size: 24px;
+    padding: 0px 5px 17px 2px;
+    font-size: 22px;
+    border-radius: 7px;
 }
 
 
@@ -71,13 +80,15 @@ img {
     
 }
 
-p {
+#explanation {
+    padding-bottom: 20px;
     width: 400px;
     text-align: center;
     margin: 15px 150px 0 150px;
-}
-#explanation {
-    margin-bottom: 50px;
+    font-size: 17px;
+    
+
+    
 }
 #scoreHeader {
     font-size: 2em;
@@ -104,8 +115,11 @@ p {
     height: 20px;
     margin-top: 50px;
     margin-bottom: 0;
+    padding-bottom: 17px;
     width: 40px;
-    border-bottom: 2px black solid;
+    border-bottom: 2px white solid;
+    font-size: 2em;
+    font-weight: 800;
 }
 ol {
     margin: 0 30px 0 0;
@@ -123,24 +137,43 @@ ol {
 .right{
     height: 20px;
     width: 50px;
-    border-bottom: 2px black solid;
+    border-bottom: 2px white solid;
     margin: 40px 25px 0 0px;
     padding-bottom: 17px;
     font-size: 2em;
+    font-weight: 800;
 
 }
 
 .button {
     width: 100px;
-    height: 20px;
-    background-color: blue;
+    height: 26px;
+    background-color: orangered;
     color: white;
-    margin-top: 60px;
+    margin-top: 40px;
+    margin-right: 14px;
+    font-size: 15px;
+    border-radius: 13px;
+    font-family: 'Staatliches', cursive;
+    padding-top: 4px;
 
 }
+.button:hover {
+    background: red;
+}
+
 footer {
-    margin: 60px 0 0 50px;
+    margin: 60px 0 0 0;
     color: red;
+    font-family: 'Times New Roman', Times, serif;
 
 
+}
+@media (max-width: 830px) {
+    header {
+        width: 830px;
+    }
+    h1 {
+        margin-right: 30px;
+    }
 } 
