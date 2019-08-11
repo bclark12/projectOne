@@ -127,7 +127,7 @@ let checkWin = function () {
     if (this.innerText == 'Z') {
         return console.log('stop messing with stuff and play a new game')
     }
-    if (this.innerText !== 'Z') {
+    //if (this.innerText !== 'Z') {
         let scoreboard = document.getElementById('scoreboardWin')
         let scoreboardText = scoreboard.innerText;
         let scoreboardValue = parseFloat(scoreboardText);
@@ -135,7 +135,7 @@ let checkWin = function () {
         scoreboard.innerHTML = scoreboardValue + 1;
         console.log(scoreboard.innerHTML);
         let winningImage = document.getElementById('mainImage');
-        winningImage.src = "images/winningImage.png";
+        winningImage.src = "images/winningImage.jpg"
         for (i = 0; i < alphabet.length; i++) {    
             let letters = document.getElementById('letter-' + i);
             letters.style.color = 'white';
@@ -153,7 +153,7 @@ let checkWin = function () {
     // if (this.innerText == 'Z') {
     // console.log('stop messing with stuff and play a new game');
     // };
-};
+//};
 
 console.log(document.getElementById('letter-' + 1).innerText)
 let checkLose = function () {
@@ -173,6 +173,8 @@ let checkLose = function () {
             letters.innerText = 'Z';
         };
         alert('you lose!')
+        document.getElementById('imgContainer').style.backgroundImage = "url('images/gameOver.png')";
+        document.getElementById('imgContainer').addEventListener('click', resetGame);
         document.getElementById('letterBank').style.background = 'white';
                              
         // if (this.innerText == 'Z') {
@@ -200,6 +202,7 @@ let resetGame = function () {
         let wrongDiv = document.getElementById('wrong-' + i);
         wrongDiv.innerText = null;
     };
+    document.getElementById('imgContainer').style.background = 'white';
     wrongLettersArray = []
     rightLettersArray = []
     startingImage = document.getElementById('mainImage');
@@ -223,6 +226,7 @@ let getNewRandomWord = function () {
         let wrongDiv = document.getElementById('wrong-' + i);
         wrongDiv.innerText = null;
     };
+    document.getElementById('imgContainer').style.background = 'white';
     document.getElementById('letterBank').style.background = 'purple';
     randomWordArray = lettersArray[getRandomWordIndex()]
     createRightBoxes();
@@ -322,3 +326,4 @@ for (i = 0; i < alphabet.length; i++) {
 };
 document.getElementById('resetButton').addEventListener('click', resetGame);
 document.getElementById('newWordButton').addEventListener('click', getNewRandomWord);
+
