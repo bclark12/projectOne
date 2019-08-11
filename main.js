@@ -202,7 +202,8 @@ let resetGame = function () {
         let wrongDiv = document.getElementById('wrong-' + i);
         wrongDiv.innerText = null;
     };
-    document.getElementById('imgContainer').style.background = 'white';
+    document.getElementById('imgContainer').removeEventListener('click', resetGame);
+    document.getElementById('imgContainer').style.background = 'none';
     wrongLettersArray = []
     rightLettersArray = []
     startingImage = document.getElementById('mainImage');
@@ -226,7 +227,7 @@ let getNewRandomWord = function () {
         let wrongDiv = document.getElementById('wrong-' + i);
         wrongDiv.innerText = null;
     };
-    document.getElementById('imgContainer').style.background = 'white';
+    document.getElementById('imgContainer').style.background = 'none';
     document.getElementById('letterBank').style.background = 'purple';
     randomWordArray = lettersArray[getRandomWordIndex()]
     createRightBoxes();

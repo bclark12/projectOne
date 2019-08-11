@@ -34,18 +34,19 @@ h1 {
     flex-wrap: wrap;
     background: purple;
     justify-content: space-evenly;
-    height: 400px;
-    width: 60px;
+    height: 470px;
+    width: 80px;
     font-weight: bolder;
     font-size: large;
     color: white;
 }
 .letters {
     height: 10px;
-    width: 15px;
+    width: 17px;
     border-bottom: 2px white solid;
     margin: 0px 3px 3px 3px;
-    padding: 0px 0 12px 5px;
+    padding: 0px 3px 17px 3px;
+    font-size: 24px;
 }
 
 
@@ -57,7 +58,6 @@ h1 {
 #imgContainer {
     width: 700px;
     height: 380px;
-    border: 2px black solid;
     margin-top: 0px;
 
 }
@@ -97,7 +97,7 @@ p {
 }
 .scoreNumbers {
     text-align: center;
-    font-size: 7em;
+    font-size: 5em;
 }
 
 .wrong {
@@ -125,7 +125,9 @@ ol {
     width: 50px;
     border-bottom: 2px black solid;
     margin: 40px 25px 0 0px;
+    padding-bottom: 17px;
     font-size: 2em;
+
 }
 
 .button {
