@@ -175,9 +175,9 @@ footer {
 
 
 }
-@media (max-width: 830px) {
+@media (max-width: 880px) {
     header {
-        width: 830px;
+        width: 880px;
     }
     h1 {
         margin-right: 30px;
