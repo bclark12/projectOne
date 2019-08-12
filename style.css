@@ -121,14 +121,18 @@ ol {
     justify-content: center;
 }
 #inputBox {
-    margin: 0px 20px 0 0;
+    margin: 0px 25px 0 0;
+    padding-left: 20px;
     text-align: center;    
+}
+#rightContainer {
+    padding: 0 0px 0 43px;
 }
 .right{
     height: 20px;
     width: 50px;
     border-bottom: 2px white solid;
-    margin: 40px 25px 0 0px;
+    margin: 40px 27px 0 0px;
     padding-bottom: 17px;
     font-size: 2em;
     font-weight: 800;
@@ -140,7 +144,7 @@ ol {
     color: cyan;
     border: 2px cyan solid;
     margin-top: 40px;
-    margin-right: 14px;
+    margin-right: 5px;
     font-size: 18px;
     border-radius: 13px;
     font-family: 'Staatliches', cursive;

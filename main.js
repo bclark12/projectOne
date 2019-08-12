@@ -7,7 +7,7 @@ for (i = 97; i <= 122; i++) {
 let wrongLettersArray = [];
 let rightLettersArray = [];
 //this is where the different words for the game can be entered
-const wordsArray = ['movie', 'heyguys', 'another', 'lastone', 'jkone', 'hat', 'cool', 'nerd'];
+const wordsArray = ['pizza', 'toothpick', 'hammer', 'shoe', 'cat', 'mop', 'cookie', 'sponge', 'milk', 'money', 'tomato'];
 //divide the words into more managable pieces
 let lettersArray = [];
 for (i = 0; i < wordsArray.length; i++) {
